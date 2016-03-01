@@ -1,0 +1,29 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>                  
+	<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+	<meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+	<meta content=always name=referrer>
+	<title>OpenLayers 3地图示例</title>
+	<link href="../ol3.13.1/ol.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="../ol3.13.1/ol.js" charset="utf-8"></script>
+</head>
+
+<body>
+	<div id="map" style="width: 100%, height: 400px"></div>
+	<script>
+	  new ol.Map({
+			layers: [
+				new ol.layer.Tile({source: new ol.source.OSM()})
+			],
+			view: new ol.View({
+				center: [0, 0],
+				resolution: 305.7481,			// level 9
+				resolutions: [2445.9849, 305.7481]	// level 6, level 9
+			}),
+			target: 'map'
+	  });
+	</script>
+</body>
+	
+</html>

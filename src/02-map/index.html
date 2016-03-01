@@ -1,0 +1,33 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>                  
+	<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+	<meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+	<meta content=always name=referrer>
+	<title>OpenLayers 3地图示例</title>
+	<link href="../ol3.13.1/ol.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="../ol3.13.1/ol.js" charset="utf-8"></script>
+</head>
+
+<body>
+	<div id="map" style="width: 100%, height: 400px"></div>
+	<script>
+	  // 新建一个地图
+	  new ol.Map({
+			// 定义地图显示图层集合
+			layers: [
+			  // 新建一个使用Open Street Map地图源的瓦片地图图层
+			  new ol.layer.Tile({source: new ol.source.OSM()})
+			],
+			// 新建显示地图的视图
+			view: new ol.View({
+			  center: [0, 0],	// 定义地图显示中心于经度0度，纬度0度处
+			  zoom: 2			// 并且定义地图显示层级为级别2
+			}),
+			// 设置id为mapch的dom元素来作为地图的容器
+			target: 'map'	
+		});
+	</script>
+</body>
+	
+</html>

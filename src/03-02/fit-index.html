@@ -1,0 +1,50 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>                  
+	<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+	<meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+	<meta content=always name=referrer>
+	<title>OpenLayers 3地图示例</title>
+	<link href="../ol3.13.1/ol.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="../ol3.13.1/ol.js" charset="utf-8"></script>
+</head>
+
+<body>
+	<div id="map" style="width: 100%, height: 400px"></div>
+	<div id="navigate-container">
+		<input type="button" onClick="moveToChengDu();" value="移动到成都区域" />
+	</div>
+	<script>
+		
+		var chengdu = new ol.geom.Polygon([
+			ol.proj.transform([104.06-0.1, 30.67+0.1], 'EPSG:4326', 'EPSG:3857'),
+			ol.proj.transform([104.06+0.1, 30.67+0.1], 'EPSG:4326', 'EPSG:3857'),
+			ol.proj.transform([104.06+0.1, 30.67-0.1], 'EPSG:4326', 'EPSG:3857'),
+			ol.proj.transform([104.06-0.1, 30.67-0.1], 'EPSG:4326', 'EPSG:3857')]);
+		
+	  var map = new ol.Map({
+			layers: [
+				new ol.layer.Tile({source: new ol.source.OSM()})
+			],
+			view: new ol.View({
+				// 设置成都为地图中心，此处进行坐标转换， 把EPSG:4326的坐标，转换为EPSG:3857坐标，因为ol默认使用的是EPSG:3857坐标
+				// 请阅读“地图坐标系”了解更多坐标系的信息。
+				center: ol.proj.transform([104.06, 30.67], 'EPSG:4326', 'EPSG:3857'),
+				zoom: 10
+			}),
+			target: 'map'
+	  });
+		
+		// 移动到成都区域
+		function moveToChengDu() {
+			var view = map.getView();
+			// 设置地图中心为成都的坐标，即可让地图移动到成都
+			
+			view.setCenter(ol.proj.transform([104.06, 30.67], 'EPSG:4326', 'EPSG:3857'));
+			map.render();
+		}
+		
+	</script>
+</body>
+	
+</html>

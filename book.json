@@ -1,0 +1,16 @@
+{
+    "gitbook": "2.x.x",
+    "title": "OpenLayers 3 Primer",
+    "description": "这是一本为初学者准备的OpenLayers 3入门书籍",
+    "structure": {
+        "readme": "README.md",
+        "summary": "SUMMARY.md"
+    },
+
+    "plugins": ["disqus"],
+    "pluginsConfig": {
+        "disqus": {
+            "shortName": "ol3primer"
+        }
+    }
+}
