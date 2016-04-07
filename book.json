@@ -14,6 +14,9 @@
         },
         "baidu": {
             "token": "598c9c941360724a65331e7d9a66c9b6"
+        },
+        "search": {
+            "maxIndexSize": 10000
         }
     }
 }
