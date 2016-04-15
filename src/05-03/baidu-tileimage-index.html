@@ -1,0 +1,69 @@
+<!Doctype html>
+<html xmlns=http://www.w3.org/1999/xhtml>
+<head>                  
+	<meta http-equiv=Content-Type content="text/html;charset=utf-8">
+	<meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+	<meta content=always name=referrer>
+	<title>OpenLayers 3地图示例</title>
+	<link href="../ol3.13.1/ol.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="../ol3.13.1/ol.js" charset="utf-8"></script>
+</head>
+
+<body>
+	<div id="baiduMap2" style="width: 100%"></div>
+	<script>
+
+		// 自定义分辨率和瓦片坐标系
+    var resolutions = [];
+    var maxZoom = 18;
+
+    for(var i=0; i<=maxZoom; i++){
+        resolutions[i] = Math.pow(2, maxZoom-i);
+    }
+    var tilegrid  = new ol.tilegrid.TileGrid({
+        origin: [0,0],
+        resolutions: resolutions
+    });
+
+    // 创建百度地图的数据源
+    var baiduSource = new ol.source.TileImage({
+        projection: 'EPSG:3857',
+        tileGrid: tilegrid,
+        tileUrlFunction: function(tileCoord, pixelRatio, proj){
+            var z = tileCoord[0];
+            var x = tileCoord[1];
+            var y = tileCoord[2];
+
+            if(x<0){
+                x = "M"+(-x);
+            }
+            if(y<0){
+                y = "M"+(-y);
+            }
+
+            return "http://online3.map.bdimg.com/onlinelabel/?qt=tile&x="+x+"&y="+y+"&z="+z+"&styles=pl&udt=20160321&scaler=2&p=1";
+        }
+    });
+
+		// 百度地图层
+		var baiduMapLayer = new ol.layer.Tile({
+			source: baiduSource
+		});
+
+		// 创建地图
+	  new ol.Map({
+			layers: [
+				baiduMapLayer
+			],
+			view: new ol.View({
+				// 设置成都为地图中心
+				center: [104.06, 30.67],
+				projection: 'EPSG:4326',
+				zoom: 10
+			}),
+			target: 'baiduMap2'
+	  });
+	</script>
+</body>
+	
+</html>

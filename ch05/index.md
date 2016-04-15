@@ -23,4 +23,6 @@
 在大概了解了整个`Source`之后，紧接着该介绍它的搭档`Layer`了，同样的，我们还是先从OpenLayers 3现有的`Layer`类图大致了解一下：
 ![ol.layer.Base类图](../img/ol_layer_Base.png)
 
-为了便于了解和使用，图中标注了每一个`Layer`对应的`Source`。
+为了便于了解和使用，图中标注了每一个`Layer`对应的`Source`。通过上图可以看到`Layer`相对于`Source`而言，真是太简单了。
+
+对于初学者而言，如何选择和应用不同的`Source`和`Layer`是一个非常迷惑和困难的问题。为此，本章将围绕着`Source`和`Layer`展开，为大家解决这个问题。
