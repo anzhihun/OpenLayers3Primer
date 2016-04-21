@@ -7,7 +7,7 @@
         "summary": "SUMMARY.md"
     },
 
-    "plugins": ["disqus", "baidu"],
+    "plugins": ["disqus", "baidu", "katex"],
     "pluginsConfig": {
         "disqus": {
             "shortName": "ol3primer"

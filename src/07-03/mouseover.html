@@ -63,7 +63,7 @@
 			target: 'map'	
 		});
 
-	  // 为地图注册鼠标移动事件的监听
+	  // 为地图注册鼠标移动事件的监听 
 	  map.on('pointermove', function(event){
 	  	map.forEachFeatureAtPixel(event.pixel, function(feature){
 	  		// 为移动到的feature发送自定义的mousemove消息
