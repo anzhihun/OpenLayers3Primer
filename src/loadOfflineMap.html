@@ -1,0 +1,40 @@
+<html>
+
+<head>
+	<title>演示在ol3中加载本地磁盘存储的离线瓦片地图</title>
+	<link rel="stylesheet" type="text/css" href="ol3.7.0/ol.css">
+	<script type="text/javascript" src="ol3.7.0/ol.js" charset="utf-8"></script>
+</head>
+
+<body>
+	<div>这是演示在ol3中加载本地磁盘存储的离线瓦片地图的demo，该例子里面的离线地图放在目录offlineMapTiles里面，作为演示，只放了一个zoom为4的成都的瓦片，地图zoom设置为4，中心设置为成都，从而地图显示时只有一个瓦片，效果如下。更多ol3的分享参见<a href="http://www.jianshu.com/collection/f12ef1a164da">OpenLayers 3专题</a> </div>
+	<div id="map" style="width:100%;"></div>
+
+	<script type="text/javascript">
+		
+		// 地图设置中心，设置到成都，在本地离线地图 offlineMapTiles刚好有一张zoom为4的成都瓦片
+		var center = ol.proj.transform([104.06667, 30.66667], 'EPSG:4326', 'EPSG:3857');
+		
+		//创建地图
+		var map = new ol.Map({
+			view: new ol.View({ 
+				center: center,
+				zoom: 4
+			}),
+			target: 'map'
+		});
+		
+		// 添加一个使用离线瓦片地图的层
+		var offlineMapLayer = new ol.layer.Tile({
+			source: new ol.source.XYZ({
+				// 设置本地离线瓦片所在路径，由于例子里面只有一张瓦片，页面显示时就只看得到一张瓦片。
+				url: 'offlineMapTiles/{z}/{x}/{y}.png'
+			})
+		});
+		
+		map.addLayer(offlineMapLayer);
+		
+	</script>
+
+</body>
+</html>
