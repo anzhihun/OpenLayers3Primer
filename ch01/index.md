@@ -16,4 +16,4 @@ OpenLayers 3简称ol3，它是一个开源的Web GIS引擎，使用了JavaScript
 ## 资源
 OpenLayers 3的官网是[http://openlayers.org/](http://openlayers.org/)，若记不住，请保存到收藏夹。在官网首页上，即可看到相关的介绍，文档，API，以及Examples链接。这些资料都跟随最新的版本实时更新，如果发现本教程有些内容和官方不一致，请以官网资料为准，可能由于版本更新导致的。
 
-喜欢研究源码的开发者，请关注github[https://github.com/openlayers/ol3](https://github.com/openlayers/ol3)。有能力者，可以考虑为OpenLayers 3提交PR和issue，不过在此之前请先阅读[贡献文档](https://github.com/openlayers/ol3/blob/master/CONTRIBUTING.md)
+喜欢研究源码的开发者，请关注github [https://github.com/openlayers/ol3](https://github.com/openlayers/ol3)。有能力者，可以考虑为OpenLayers 3提交PR和issue，不过在此之前请先阅读[贡献文档](https://github.com/openlayers/ol3/blob/master/CONTRIBUTING.md)
