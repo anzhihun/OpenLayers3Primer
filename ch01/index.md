@@ -1,9 +1,9 @@
 # OpenLayers 3 介绍
 
-OpenLayers 3简称ol3，它是一个开源的Web GIS引擎，使用了JavaScript、最新的HTML5技术及CSS技术，支持dom，canvas和webgl三种渲染方式。除了支持网页端，还支持移动端（目前移动端还不成熟，有待进一步完善）。在地图数据源方面，支持各种类型的瓦片地图，既支持在线的，也支持离线的。比如OSM, Bing, MapBox, Stamen, MapQuest等等；还支持各种矢量地图，比如GeoJSON，TopoJSON，KML，GML等等。随着OpenLayers 3的进一步发展，将支持更多的地图类型。
+OpenLayers 3简称ol3，它是一个开源的Web GIS引擎，使用了JavaScript、最新的HTML5技术及CSS技术，支持`dom`，`canvas`和`webgl`三种渲染方式。除了支持网页端，还支持移动端（目前移动端还不成熟，有待进一步完善）。在地图数据源方面，支持各种类型的瓦片地图，既支持在线的，也支持离线的。比如OSM, Bing, MapBox, Stamen, MapQuest等等；还支持各种矢量地图，比如GeoJSON，TopoJSON，KML，GML等等。随着OpenLayers 3的进一步发展，将支持更多的地图类型。
 
 ## 不兼容OpenLayers 2
-在OpenLayers 3之前，还有OpenLayers 2，虽然从名字上看是一个升级版本，但OpenLayers 3完全是重新设计，采用全新的架构，使用方式及API都不一样，只是在功能上完全实现OpenLayers 2已有的功能。为此，使用OpenLayers 3不必先学习OpenLayers 2。但使用过OpenLayers 2，并不等于直接就会用OpenLayers 3，仍然需要从零开始学习它。
+在OpenLayers 3之前，还有OpenLayers 2，虽然从名字上看是一个升级版本，但OpenLayers 3完全是重新设计，采用全新的架构，使用方式及API都不一样，只是在功能上完全实现OpenLayers 2已有的功能。为此，使用OpenLayers 3不必先学习OpenLayers 2。但使用过OpenLayers 2，并不等于直接就会用OpenLayers 3，仍然需要从零开始学习。
 
 ## 浏览器支持
 由于OpenLayers 3使用了HTML5技术，所以对各种浏览器的版本有所要求。IE浏览器最低也需要IE9才行，以下的IE浏览器可以考虑使用OpenLayers 2。其他浏览器的最低版本要求为Firefox 3.5，Chrome 3.0，Safari 3.0，Opera 10.5。如果要使用`webgl`渲染方式，则又需要参考各大浏览器的支持程度进行选择。
