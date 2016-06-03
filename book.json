@@ -7,7 +7,7 @@
         "summary": "SUMMARY.md"
     },
 
-    "plugins": ["disqus", "baidu", "katex"],
+    "plugins": ["disqus", "baidu", "katex", "donate"],
     "pluginsConfig": {
         "disqus": {
             "shortName": "ol3primer"
@@ -17,6 +17,10 @@
         },
         "search": {
             "maxIndexSize": 10000
+        },
+		"donate": {
+            "alipay": "/img/5rmb.jpg",
+			"button": "打赏"
         }
     }
 }
