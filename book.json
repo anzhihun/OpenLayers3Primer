@@ -19,7 +19,7 @@
             "maxIndexSize": 10000
         },
 		"donate": {
-            "alipay": "/img/5rmb.jpg",
+            "alipay": "http://weilin.me/ol3-primer/img/5rmb.jpg",
 			"button": "打赏"
         }
     }
