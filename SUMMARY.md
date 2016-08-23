@@ -77,4 +77,5 @@
 	* [利用postcompose事件做动画](ch11/11-03.md)
 * [进阶实例](ch12/index.md)
     * [通过wfs增删改查要素](ch12/12-01.md)
+      * [GeoServer环境配置](ch12/12-01-01.md)
 * [常见问题](ch13/index.md)
