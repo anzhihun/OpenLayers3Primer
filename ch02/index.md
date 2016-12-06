@@ -24,7 +24,7 @@
 
 要显示上面这个地图，仅需要新建一个html文档，在其中编写如下代码即可：
 
-```html
+``` html
 <!Doctype html>
 <html xmlns=http://www.w3.org/1999/xhtml>
 <head>                  

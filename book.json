@@ -7,11 +7,8 @@
         "summary": "SUMMARY.md"
     },
 
-    "plugins": ["disqus", "baidu", "katex", "donate"],
+    "plugins": ["duoshuo", "baidu", "katex", "donate", "github-buttons", "github"],
     "pluginsConfig": {
-        "disqus": {
-            "shortName": "ol3primer"
-        },
         "baidu": {
             "token": "598c9c941360724a65331e7d9a66c9b6"
         },
@@ -20,7 +17,32 @@
         },
 		"donate": {
             "alipay": "http://weilin.me/ol3-primer/img/5rmb.jpg",
+            "wechat": "http://weilin.me/ol3-primer/img/weixin-5rmb.png",
 			"button": "打赏"
-        }
+        },
+        "duoshuo": {
+            "short_name": "ol3-primer",
+            "theme": "default"
+        },
+        "github-buttons": {
+          "repo": "anzhihun/OpenLayers3Primer",
+          "types": [
+            "star",
+            "watch"
+          ],
+          "size": "small"
+        },
+        "github": {
+            "url": "https://github.com/anzhihun/OpenLayers3Primer"
+        },
+        "sharing": {
+              "facebook": false,
+              "twitter": true,
+              "google": false,
+              "weibo": true,
+              "instapaper": false,
+              "vk": false,
+              "all": ["weibo", "facebook", "google", "twitter"]
+          }
     }
 }
